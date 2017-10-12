@@ -40,7 +40,7 @@ class SyncInternetEmulatorServiceInstance(SyncInstanceUsingAnsible):
     watches = [ModelLink(ServiceDependency,via='servicedependency')]
 
     def __init__(self, *args, **kwargs):
-        super(SyncInternetEmulatorInstance, self).__init__(*args, **kwargs)
+        super(SyncInternetEmulatorServiceInstance, self).__init__(*args, **kwargs)
 
     def get_internetemulator(self, o):
         if not o.owner:
