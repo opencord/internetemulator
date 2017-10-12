@@ -1,0 +1,10 @@
+option app_label = "internetemulator";
+option name = "internetemulator";
+
+message InternetEmulatorService (Service){
+    option verbose_name = "Internet Emulator Service";
+}
+
+message InternetEmulatorServiceInstance (TenantWithContainer){
+     option verbose_name = "Internet Emulator Service Instance";
+}
