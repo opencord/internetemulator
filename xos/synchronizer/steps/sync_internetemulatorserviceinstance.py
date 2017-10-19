@@ -33,7 +33,7 @@ class SyncInternetEmulatorServiceInstance(SyncInstanceUsingAnsible):
 
     requested_interval = 0
 
-    template_name = "internetemulatorsesrviceinstance_playbook.yaml"
+    template_name = "internetemulatorserviceinstance_playbook.yaml"
 
     service_key_name = "/opt/xos/synchronizers/internetemulator/internetemulator_private_key"
 
