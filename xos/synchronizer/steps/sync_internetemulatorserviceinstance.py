@@ -27,17 +27,9 @@ logger = Logger(level=logging.INFO)
 
 class SyncInternetEmulatorServiceInstance(SyncInstanceUsingAnsible):
 
-    provides = [InternetEmulatorServiceInstance]
-
     observes = InternetEmulatorServiceInstance
-
-    requested_interval = 0
-
     template_name = "internetemulatorserviceinstance_playbook.yaml"
-
     service_key_name = "/opt/xos/synchronizers/internetemulator/internetemulator_private_key"
-
-    watches = [ModelLink(ServiceDependency,via='servicedependency')]
 
     def __init__(self, *args, **kwargs):
         super(SyncInternetEmulatorServiceInstance, self).__init__(*args, **kwargs)
