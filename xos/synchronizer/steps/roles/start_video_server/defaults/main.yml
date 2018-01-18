@@ -13,13 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+---
 
-from service import XOSService
-from services.internetemulator.models import InternetEmulatorService
-
-class XOSInternetEmulatorService(XOSService):
-    provides = "tosca.nodes.InternetEmulatorService"
-    xos_model = InternetEmulatorService
-    copyin_props = ["view_url", "icon_url", "enabled", "published", "public_key", "private_key_fn", "versionNumber"]
-
-
+video_streaming_port: 8080
+video_streaming_url: video
+ttl: 1

@@ -13,15 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
 ---
-# internetemulatorserviceinstance_playbook
 
-- hosts: "{{ instance_name }}"
-  connection: ssh
-  user: ubuntu
-  sudo: no
-  gather_facts: no
-
-  roles:
-    - start_video_server
+- name: start video streaming VLC server
+  command: vlc -I dummy demo-video.mp4 --sout='#rtp{sdp=rtsp://:{{ video_streaming_port }}/{{ video_streaming_url }}}' --sout-keep --loop --ttl {{ ttl }}
+  async: 1000
+  poll: 0
