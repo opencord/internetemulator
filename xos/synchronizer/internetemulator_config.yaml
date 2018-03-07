@@ -14,7 +14,7 @@
 # limitations under the License.
 
 
-name: internetemulator-synchronizer
+name: internetemulator
 accessor:
   username: xosadmin@opencord.org
   password: "@/opt/xos/services/internetemulator/credentials/xosadmin@opencord.org"
@@ -25,4 +25,5 @@ required_models:
 dependency_graph: "/opt/xos/synchronizers/internetemulator/model-deps"
 steps_dir: "/opt/xos/synchronizers/internetemulator/steps"
 sys_dir: "/opt/xos/synchronizers/internetemulator/sys"
+models_dir: "/opt/xos/synchronizers/internetemulator/models"
 model_policies_dir: "/opt/xos/synchronizers/internetemulator/model_policies"
