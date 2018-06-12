@@ -14,4 +14,21 @@
 # limitations under the License.
 
 
-python internetemulator-synchronizer.py
+name: internetemulator
+required_models:
+  - InternetEmulatorService
+  - InternetEmulatorServiceInstance
+steps_dir: "/opt/xos/synchronizers/internetemulator/steps"
+sys_dir: "/opt/xos/synchronizers/internetemulator/sys"
+model_policies_dir: "/opt/xos/synchronizers/internetemulator/model_policies"
+models_dir: "/opt/xos/synchronizers/internetemulator/models"
+logging:
+  version: 1
+  handlers:
+    console:
+      class: logging.StreamHandler
+  loggers:
+    'multistructlog':
+      handlers:
+          - console
+      level: DEBUG
