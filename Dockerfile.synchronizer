@@ -14,7 +14,7 @@
 
 # xosproject/internetemulator-synchronizer
 
-FROM xosproject/xos-synchronizer-base:2.1.9
+FROM xosproject/xos-synchronizer-base:2.1.22
 
 COPY xos/synchronizer /opt/xos/synchronizers/internetemulator
 COPY VERSION /opt/xos/synchronizers/internetemulator/
